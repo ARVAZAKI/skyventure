@@ -36,19 +36,17 @@
                       @foreach($event as $index => $eventItem)
                           <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
                               <img src="{{ asset('storage/img/events/' . $eventItem->image) }}" alt="Event Image {{ $index + 1 }}" class="d-block w-100 img-fluid rounded">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <h5>Event</h5>
+                              <div class="carousel-caption d-block">
                                   <p>{{ $eventItem->event_name }}</p>
                               </div>
                           </div>
                       @endforeach
-              
+          
                       <!-- News Images -->
                       @foreach($news as $index => $newsItem)
                           <div class="carousel-item">
                               <img src="{{ asset('storage/img/news/' . $newsItem->image) }}" alt="News Image {{ $index + 1 }}" class="d-block w-100 img-fluid rounded">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <h5>News</h5>
+                              <div class="carousel-caption d-block">
                                   <p>{{ $newsItem->news_title }}</p>
                               </div>
                           </div>
@@ -66,6 +64,7 @@
                   </a>
               </div>
           </div>
+          
         </div>
         
 
@@ -267,7 +266,7 @@
               </div>
               <h4 class="feature-title mb-3" style="color: #333; font-weight: 600;">{{$newsItem->news_title}}
               </h4>
-              <a href="" style="color: #ff6600; font-weight: 500; text-decoration: none; transition: color 0.3s ease;">Baca Selengkapnya</a>
+              <a href="{{route('news.show', $newsItem->id)}}" style="color: #ff6600; font-weight: 500; text-decoration: none; transition: color 0.3s ease;">Baca Selengkapnya</a>
             </div>
           </div>
           @endforeach
@@ -340,7 +339,7 @@
           }
         }
       </script>
-      <div class="swiper-wrapper d-flex justify-content-center align-items-center">
+      <div class="swiper-wrapper align-items-center">
         @foreach ($tenant as $tenantItem)
         <div class="swiper-slide text-center">
             <img src="{{ asset('storage/img/tenants/'.$tenantItem->image) }}" class="img-fluid" alt="">

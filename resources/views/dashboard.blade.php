@@ -104,6 +104,27 @@
                         </div>
                     </a>
                 </div>
+                @if (Auth::user()->role == 'superadmin')
+                <div class="col-6 col-lg-6 mb-4">
+                    <a href="{{route('account.index')}}" class="card-link">
+                        <div class="card clickable-card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon red">
+                                            <i class="iconly-boldProfile"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Akun</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endif
             </div>
         </div>
     </section>

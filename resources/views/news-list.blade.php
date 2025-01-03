@@ -37,11 +37,16 @@
         @foreach ($otherNews as $news)
             <div class="col-md-2">
                 <a href="{{ route('news.show', $news->id) }}">
-                    <img src="{{ asset('storage/img/news/' . $news->image) }}" alt="Berita" class="img-fluid">
+                    <img 
+                        src="{{ asset('storage/img/news/' . $news->image) }}" 
+                        alt="Berita" 
+                        class="img-fluid" 
+                        style="width: 100%; height: 100px; object-fit: cover; border-radius: 5px;">
                     <p class="mt-2">{{ \Illuminate\Support\Str::limit($news->news_title, 50) }}</p>
                 </a>
             </div>
         @endforeach
     </div>
+    
 </div>
 @endsection

@@ -36,10 +36,10 @@
     
       <!-- Logo -->
       <div class="d-flex align-items-center">
-        <a href="" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
           <img src={{asset("assets/images/logo/logo-pens.png")}} alt="Logo PENS" class="logo-img">
         </a>
-        <a href="" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
+        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
             <img src={{asset("assets/images/logo/skyventure.png")}} alt="Logo PENS" class="logo-img">
         </a>
       </div>

@@ -18,9 +18,7 @@ class EventController extends Controller
 
     public function listEvent()
     {
-        $events = Event::where('event_date', '>=', Carbon::now())
-            ->orderBy('event_date', 'asc')
-            ->get();
+        $events = Event::all();
     
         return view('event', compact('events'));
     }

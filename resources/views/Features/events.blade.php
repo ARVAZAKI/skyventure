@@ -69,7 +69,7 @@
                             </div>
                             <form action="{{ route('event.update', $event->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                @method('PUT')
+                                @method('POST')
                                 <div class="modal-body">
                                     <div class="mb-3">
                                         <label for="image" class="form-label">Image</label>
